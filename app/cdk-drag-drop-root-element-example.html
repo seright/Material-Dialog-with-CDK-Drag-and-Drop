@@ -1,0 +1,25 @@
+<button (click)="openDialog()">Open a draggable dialog</button>
+
+<ng-template>
+  <div class="example-dialog-content" cdkDrag cdkDragRootElement=".cdk-overlay-pane"
+       cdkDragBoundary=".cdk-overlay-backdrop">
+      <mat-toolbar mat-dialog-title cdkDragHandle class="example-dialog-title">
+        <mat-icon>drag_indicator</mat-icon>
+
+        <div class="mat-dialog-title">Drag-able Dialog Example</div>
+
+        <button mat-icon-button (click)="closeDialog()">
+          <mat-icon >close</mat-icon>
+        </button>
+      </mat-toolbar>
+
+      <section mat-dialog-content class="example-dialog-content">
+        Drag the dialog around!
+      </section>
+  </div>
+</ng-template>
+
+
+<!-- Copyright 2019 Google Inc. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license -->
